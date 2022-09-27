@@ -2,6 +2,7 @@ import { IonIconComponent } from './../projects/ion/src/lib/icon/icon.component'
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import { moduleMetadata } from '@storybook/angular';
 import { MessageComponent } from '../projects/ion/src/lib/message/message.component';
+import { NotificationComponent } from '../projects/ion/src/public-api';
 
 export default {
   title: 'Ion/Feedback/Message',
@@ -9,7 +10,8 @@ export default {
   decorators: [
     moduleMetadata({
       imports: [],
-      declarations: [IonIconComponent],
+      entryComponents: [NotificationComponent],
+      declarations: [IonIconComponent, NotificationComponent],
     }),
   ],
 } as Meta;
